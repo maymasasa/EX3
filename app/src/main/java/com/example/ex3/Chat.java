@@ -16,6 +16,7 @@ public class Chat extends AppCompatActivity {
     private AppDB db;
     private UserDao userDao;
     private MessageDao messageDao;
+    ListView lvUsers;
     private List<User> users;
     ArrayAdapter<User> adapter;
 
@@ -32,13 +33,23 @@ public class Chat extends AppCompatActivity {
             startActivity(intent);
         });
         users = userDao.index();
-        ListView lvUsers = findViewById(R.id.lvUsers);
+        lvUsers = findViewById(R.id.lvUsers);
         adapter = new ArrayAdapter<User>(this, android.R.layout.simple_list_item_1,users);
         lvUsers.setAdapter(adapter);
+        lvUsers.setOnItemLongClickListener((adapterView, view, i, l) -> {
+             User user = users.remove(i);
+             userDao.delete(user);
+             adapter.notifyDataSetChanged();
+             return true;
+             });
     }
 
     @Override
     protected void onResume() {
         super.onResume();
+        users.clear();
+        users.addAll(userDao.index());
+        adapter.notifyDataSetChanged();
+
     }
 }
