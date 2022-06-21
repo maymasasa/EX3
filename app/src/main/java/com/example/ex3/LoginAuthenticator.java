@@ -1,2 +1,5 @@
-package com.example.ex3;public class LoginAuthenticator {
+package com.example.ex3;
+
+public class LoginAuthenticator {
+
 }
