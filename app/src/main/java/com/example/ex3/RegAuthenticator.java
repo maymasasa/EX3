@@ -11,7 +11,7 @@ import java.util.regex.Pattern;
  */
 public class RegAuthenticator {
     private static final String PASSWORD_PATTERN =
-            "^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#&()–[{}]:;',?/*~$^+=<>]).{8,20}$";
+            "^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z]).{8,20}$";
     private static final String USERNAME_PATTERN =
             "^[a-zA-Z0-9]([._-](?![._-])|[a-zA-Z0-9]){3,18}[a-zA-Z0-9]$";
     private static final Pattern pattern = Pattern.compile(PASSWORD_PATTERN);
@@ -21,8 +21,8 @@ public class RegAuthenticator {
         Comparing with 2 passwords in the registration screen.
      */
     public static boolean matchPass(EditText password_1, EditText password_2) {
-        String password1 = password_1.toString();
-        String password2 = password_1.toString();
+        String password1 = password_1.getText().toString();
+        String password2 = password_2.getText().toString();
         if (password2 != null)
             return password1.equals(password2);
         return false;
@@ -33,7 +33,7 @@ public class RegAuthenticator {
      */
     public static boolean nameAuth(EditText name) {
         /* Are there any other validations?(like comparing with DB) */
-        String name_ = name.toString();
+        String name_ = name.getText().toString();
         Matcher matcher = pattern2.matcher(name_);
         return matcher.matches();
     }
@@ -42,7 +42,7 @@ public class RegAuthenticator {
         Validating password using regex.
     */
     public static boolean passAuth(EditText password) {
-        String password_ = password.toString();
+        String password_ = password.getText().toString();
         Matcher matcher = pattern.matcher(password_);
         return matcher.matches();
     }

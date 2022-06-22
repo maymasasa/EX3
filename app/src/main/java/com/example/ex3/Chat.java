@@ -32,6 +32,11 @@ public class Chat extends AppCompatActivity {
             Intent intent = new Intent(this, AddFriend.class);
             startActivity(intent);
         });
+        FloatingActionButton settingsBtn = findViewById(R.id.floatingSettingsBtn);
+        settingsBtn.setOnClickListener(view -> {
+            Intent intent = new Intent(this, Settings.class);
+            startActivity(intent);
+        });
         users = userDao.index();
         lvUsers = findViewById(R.id.lvUsers);
         adapter = new ArrayAdapter<User>(this, android.R.layout.simple_list_item_1,users);

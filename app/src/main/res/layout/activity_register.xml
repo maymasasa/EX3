@@ -15,7 +15,7 @@
         android:orientation="vertical">
 
         <EditText
-            android:id="@+id/editTextTextEmailAddress"
+            android:id="@+id/username2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
@@ -23,7 +23,7 @@
             android:inputType="textPersonName"
             android:minHeight="48dp" />
         <EditText
-            android:id="@+id/editTextTextPersonName"
+            android:id="@+id/nickname"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
@@ -69,5 +69,14 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:text="@string/register" />
+
+        <TextView
+            android:id="@+id/IncorrectData"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/red"
+            android:textAlignment="center"
+            android:text="" />
+
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

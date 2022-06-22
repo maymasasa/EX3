@@ -11,4 +11,6 @@
     <string name="addprofilepic">Add Profile Picture</string>
     <string name="add">Add</string>
     <string name="add_friend">Add friend</string>
+    <string name="settings">settings</string>
+    <string name="userslist">UsersList</string>
 </resources>
