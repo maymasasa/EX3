@@ -7,16 +7,15 @@
     android:orientation="vertical"
     tools:context=".Chat">
 
-    <ListView
-        android:id="@+id/lvUsers"
-        android:contentDescription="@string/userslist"
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_editor_absoluteX="0dp"
-        app:layout_editor_absoluteY="0dp" />
+        android:layout_height="match_parent"
+        android:id="@+id/RefreshLayout">
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/lstUsers"/>
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/btnAdd"
