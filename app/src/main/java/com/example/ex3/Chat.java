@@ -29,14 +29,16 @@ public class Chat extends AppCompatActivity {
         lstUsers.setAdapter(adapter);
         lstUsers.setLayoutManager(new LinearLayoutManager(this));
         List<User> users = new ArrayList<>();
-        users.add(new User(1, "may", "ערה?", "11:11", R.drawable.maymasasa));
-        users.add(new User(1, "may", "ערה?", "11:11", R.drawable.maymasasa));
-        users.add(new User(1, "may", "ערה?", "11:11", R.drawable.maymasasa));
-        users.add(new User(1, "may", "ערה?", "11:11", R.drawable.maymasasa));
-        users.add(new User(1, "may", "ערה?", "11:11", R.drawable.maymasasa));
-        users.add(new User(1, "may", "ערה?", "11:11", R.drawable.maymasasa));
-        users.add(new User(1, "may", "ערה?", "11:11", R.drawable.maymasasa));
-        users.add(new User(1, "may", "ערה?", "11:11", R.drawable.maymasasa));
+        users.add(new User(1, "may", "hi", "11:11", R.drawable.maymasasa));
+        users.add(new User(1, "may", "hi", "11:11", R.drawable.maymasasa));
+        users.add(new User(1, "may", "hi", "11:11", R.drawable.maymasasa));
+        users.add(new User(1, "may", "hi", "11:11", R.drawable.maymasasa));
+        users.add(new User(1, "may", "hi", "11:11", R.drawable.maymasasa));
+        users.add(new User(1, "may", "hi", "11:11", R.drawable.maymasasa));
+        users.add(new User(1, "may", "hi", "11:11", R.drawable.maymasasa));
+        users.add(new User(1, "may", "hi", "11:11", R.drawable.maymasasa));
+        users.add(new User(1, "may", "hi", "11:11", R.drawable.maymasasa));
+
         adapter.setUsers(users);
 
         FloatingActionButton addBtn = findViewById(R.id.btnAdd);
